@@ -1,0 +1,15 @@
+@import '../styling/colors.scss';
+
+.accentButton {
+    display: block;
+    padding: .8em 1.2em;
+    border: 1px solid $accent;
+    border-radius: 4px;
+    background-color: transparent;
+    color: $accent;
+}
+
+.accentButton:hover {
+    text-decoration: none !important;
+    background-color: $bg-accent;
+}

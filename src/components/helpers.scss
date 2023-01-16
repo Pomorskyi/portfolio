@@ -1,0 +1,60 @@
+@import '../styling/colors.scss';
+@import '../styling/utilStyling.scss';
+
+nav {
+  display: flex;
+  position: absolute;
+  color: $base-color;
+  justify-content: space-between;
+  width: 100%;
+  background: $bg-base-color;   
+
+  .rightPanel {
+    display: flex;
+    margin: 1em 5rem;
+
+    ol {
+        list-style-type: none;
+        font-weight: 600;
+        margin: 0;
+        margin-right: 3rem;
+        padding: 0;
+
+        a {
+            display: inline-block;
+            padding: 1em 1em 1em 0;
+            color: $base-color;
+            text-decoration: none;
+            transition: 500ms;
+        }
+
+        a:hover {
+            color: $accent;
+            text-decoration: underline;
+        }
+        
+        li {
+            display: inline-block;
+            margin-left: 1.5em;
+        }
+        li:first-child {
+            display: inline-block;
+            margin-left: 0;
+        }
+    
+        li:nth-child(1)::before {
+            content: '📝 ';
+        }
+        li:nth-child(2)::before {
+            content: '⚡ ';
+        }
+        li:nth-child(3)::before {
+            content: '💼 ';
+        }
+        li:nth-child(4)::before {
+            content: '📞 ';
+        }
+    }
+
+  }
+}

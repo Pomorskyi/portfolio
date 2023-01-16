@@ -1,0 +1,113 @@
+@import 'styling/colors.scss';
+@import 'styling/utilStyling.scss';
+
+.App {
+  text-align: center;
+  background-color: $bg-base-color;
+}
+
+.outerContainer {
+  color: $base-color;
+  background-color: $bg-base-color;
+  padding: 10rem 0;
+  text-align: left;
+
+  p {
+    font-size: 18px;
+  }
+
+  .outerAccentButton {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  section {
+    padding: 10rem 0;
+  }
+
+  a {
+    color: $accent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $accent;
+  }
+
+  #greetings {
+
+    h6 {
+      color: $accent;
+      font-size: x-large;
+    }
+
+    h1 {
+      font-size: 74px;
+      font-weight: 700;
+      color: $white-text;
+      margin: .1em 0 .1em 0;
+    }
+
+    h2 {
+      margin: 0 0 1.3em 0;
+      font-size: 50px;
+    }
+
+    p {
+      margin: 0 0 3rem 0;
+    }
+  }
+
+  #aboutMe {
+    margin-top: 10rem;
+
+    .accentedText {
+      color: $accent;
+    }
+
+    ul {
+      padding: 0 1em;
+
+      li::marker {
+        color: $accent;
+      }
+    }
+
+    h3 {
+      margin: 0 0 3rem 0;
+      color: $white-text;
+    }
+
+    p {
+      line-height: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    img {
+      margin-top: 3rem;
+      
+      --s: 306px;   /* the size of the image */
+      --b: 8px;     /* the border thickness*/
+      --g: 14px;    /* the gap */
+      --c: #97c10b; /* the color */
+
+      width: var(--s);
+      aspect-ratio: 1;
+      outline: calc(var(--s)/2) solid #0009;
+      outline-offset: calc(var(--s)/-2);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    img:hover {
+      outline: var(--b) solid var(--c);
+      outline-offset: var(--g);
+    }
+
+    img + img {
+      border-radius: 50%;
+    }
+
+  }
+}
+
