@@ -12,6 +12,10 @@
   padding: 10rem 0;
   text-align: left;
 
+  .accentedText {
+    color: $accent;
+  }
+
   p {
     font-size: 18px;
   }
@@ -62,10 +66,6 @@
   #aboutMe {
     margin-top: 10rem;
 
-    .accentedText {
-      color: $accent;
-    }
-
     ul {
       padding: 0 1em;
 
@@ -109,5 +109,64 @@
     }
 
   }
+
+  #work {
+    margin-top: 10rem;
+
+    h3 {
+      margin: 0 0 3rem 0;
+      color: $white-text;
+    }
+
+    .btnsList {
+      margin: 0;
+      padding: 0;
+
+      button {
+        width: 100%;
+        background-color: transparent;
+        color: $base-color;
+        font-weight: 600;
+        font-size: larger;
+        border: none;
+        margin-bottom: 1.5em;
+        padding: 1em 0;
+      }
+
+      .activeBtn {
+        color: $accent;
+        background-color: $bg-base_active-color;
+        border-left: 2px solid $accent;
+      }
+
+      .funnyTip {
+        margin-top: 2rem;
+        // font-weight: 100;
+        font-size: smaller;
+        text-align: center;
+      }
+    }
+
+    .textAboutCompany {
+      position: relative;
+
+      h5 {
+        color: $white-text;
+      }
+
+      .timeFrame {
+        width: 100%;
+        top: -3em;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
 }
 
+@media only screen and (max-width: 991px) {
+  .textAboutCompany {
+    margin-top: 3em;
+  }
+}

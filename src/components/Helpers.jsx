@@ -1,13 +1,15 @@
-import React from 'react'
-import Header from './Header'
-import './helpers.scss'
+import React from 'react';
+import Header from './Header';
+import './helpers.scss';
+import LeftSlider from './LeftSlider';
 
 const Helpers = () => {
   return (
     <React.Fragment>
       <Header />
+      <LeftSlider></LeftSlider>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Helpers
+export default Helpers;

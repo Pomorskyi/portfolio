@@ -58,3 +58,55 @@ nav {
 
   }
 }
+
+.leftSlider {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: white;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 1em;
+        
+        li {
+            margin: 1em 0;
+
+            a {
+                position: relative;
+
+                img {
+                    transition: 10s ease;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .img-top {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 99;
+                }
+            }
+
+            a:hover .img-top {
+                display: block;
+            }
+        }
+    }
+
+    .vlOuter {
+        margin-top: 1em;
+        display: flex;
+        justify-content: center;
+
+        .vl {
+            border-right: 1px solid #8892b0;
+            height: 80px;
+            align-self: center;
+        }
+    }
+}
