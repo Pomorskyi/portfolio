@@ -402,4 +402,13 @@
       font-size: 42px !important;
     }
   }
+
+  #projects {
+    .imgContainer {
+      display: none !important;
+    }
+    .txtContainer {
+      width: 100% !important;
+    }
+  }
 }

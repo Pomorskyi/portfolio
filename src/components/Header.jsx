@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import resume from '../assets/files/MYKHAILO_POMORSKYI.pdf';
 import menu from '../assets/images/menu.png';
@@ -6,10 +6,17 @@ import menuBg from '../assets/images/menu_bg.png';
 import MobileMenu from './MobileMenu';
 
 const Header = () => {
+  const [openedMobileNav, setOpenedMobileNav] = useState(false);
+
   return (
     <nav id="navbar_top">
       <div className="d-none d-lg-block"></div>
-      <button className="d-block d-lg-none menuOpener">
+      <button
+        className="d-block d-lg-none menuOpener"
+        onClick={() => {
+          setOpenedMobileNav(!openedMobileNav);
+        }}
+      >
         <img src={menu} alt="Menu" className="img-top" />
         <img src={menuBg} alt="Menu" />
       </button>
@@ -48,7 +55,12 @@ const Header = () => {
           Resume
         </a>
       </div>
-      <MobileMenu />
+      <MobileMenu
+        isOpen={openedMobileNav}
+        close={() => {
+          setOpenedMobileNav(!openedMobileNav);
+        }}
+      />
     </nav>
   );
 };
